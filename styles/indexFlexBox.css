@@ -1,0 +1,73 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4em;
+    flex: 1 1 auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.baraMeniu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+li div{
+    height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.baraMeniu ul{
+    display: flex;
+}
+
+.logoSiBaraCautare{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.baraCautare{
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0.2em;
+}
+
+.categoriiPopulare,
+.anunturiPromovate,
+.anunturiRecente{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2em;
+}
+
+.containerAnunturiiPromovate,
+.containerAnunturiiRecente,
+.containerCategorii{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerAnunturiiPromovate div,
+.containerAnunturiiRecente div,
+.containerCategorii div{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
