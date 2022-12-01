@@ -1,0 +1,155 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.baraMeniu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.baraMeniu ul{
+    display: flex;
+}
+
+.baraMeniu li{
+    height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anunturi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anunturi h1{
+    padding: 0.5em;
+}
+
+.containerBaraDeCautareRezultat{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.baraDeCautare{
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    justify-content: center;
+    align-self: center;
+    min-width: 96.7%;
+    max-width: 96.7%;
+}
+
+.bgBaraDeCautare{
+    display: flex;
+    align-items: center;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    min-width: 99%;
+    max-width: 99%;
+}
+
+.rezultat{
+    display: flex;
+    gap: 1em;
+    padding: 0.5em 0.5em 0.5em 1em;
+    min-width: 96.7%;
+    max-width: 96.7%;
+    align-self: center;
+}
+
+.container{
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+.filtre{
+    padding: 0.5em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.containerFiltre{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1em;
+    gap: 1em;
+}
+
+.pret{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+.pret ul{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.conditie,
+.categorie,
+.judet{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1em;
+    gap: 0.5em;
+    border-radius: 20px;
+}
+
+.containerSortareAfisareProd{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    gap: 0.7em;
+}
+
+.containerSortare,
+.tipAfisare{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordineSortare{
+    display: flex;
+    gap: 1em;
+}
+
+.containerProduse
+{
+    display: flex;
+    flex: 1 1 auto;
+    justify-items: flex-start;
+}
+.produs{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.3em;
+    flex: 1 1 auto;
+    align-items: center;
+}

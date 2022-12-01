@@ -1,0 +1,123 @@
+body{
+    background-color: #d9d9d9;
+}
+
+.baraMeniu{
+    background-color: #f3f3f3;
+}
+
+.baraMeniu li:hover{
+    background-color: #dfdfdf;
+}
+
+.baraMeniu li:active{
+    background-color: #c5c5c5;
+}
+
+.anunturi{
+    background-color: #f3f3f3;
+}
+
+.baraDeCautare{
+    background-color: #f3f3f3;
+    border-radius: 16px;
+
+}
+
+.bgBaraDeCautare{
+    background-color: #d9d9d9;
+    border-radius: 16px;
+}
+
+#baraDeCautare{
+    min-width: 97.5%;
+}
+
+#lupa{
+    max-width: 2%;
+
+}
+
+input{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.rezultat{
+    background-color: #f3f3f3;
+    border-radius: 16px;
+}
+
+.rezultat p{
+    font-size: 1.5em;
+}
+
+.filtre  h2{
+    padding: 0.5em;
+}
+
+.filtre{
+    background-color: #f3f3f3;
+    border-radius: 20px;
+}
+
+.containerFiltre{
+    background-color: #d9d9d9;
+}
+
+.pret{
+    background-color: #f3f3f3;
+    border-radius: 20px;
+}
+
+.conditie{
+    background-color: #f3f3f3;
+}
+
+.categorie{
+    background-color: #f3f3f3;
+}
+
+.judet{
+    background-color: #f3f3f3;
+}
+
+.formaButonAdaugare{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50%;
+    border-width: 0.1mm;
+}
+
+.containerSortare,
+.tipAfisare{
+    background-color: #f3f3f3;
+    border-radius: 16px;
+    padding: 0.5em;
+}
+
+.formaButon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 16px;
+    border-width: 0.1mm;
+    padding: 0.2em;
+}
+
+.produs{
+    background-color: #f3f3f3;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.pozaProdus{
+    max-width: 20%;
+}

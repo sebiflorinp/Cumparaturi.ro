@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cautare</title>
+        <link rel="stylesheet" href="/styles/cautareFlexBox.css">
+        <link rel="stylesheet" href="/styles/cautareStyle.css">
+    </head>
+    <body>
+       <div class="baraMeniu">
+            <h1>Pagina start</h1>
+            <ul>
+                <li id="cont">Cont</li>
+                <li id="cos">Cos</li>
+                <li id="vinde">Vinde</li>
+                <li id="setari">Setari</li>
+            </ul>
+       </div>
+       <div class="anunturi">
+            <h1>Anunturi</h1>
+       </div>
+       <div class="containerBaraDeCautareRezultat">
+            <div class="baraDeCautare">
+                    <div class="bgBaraDeCautare">
+                        <input type="text" id="baraDeCautare">
+                        <img src="/images/lupa.png" alt="lupa" id="lupa">
+                    </div>
+            </div>
+            <div class="rezultat">
+                    <p>Ai cautat:</p>
+                    <p id="ceAmCautat"> Logan </p>
+            </div>
+       </div>
+       <div class="container">
+            <div class="filtre">
+                <h2>Filtre</h2>
+                <div class="containerFiltre">
+                    <div class="pret">
+                        <h3>Pret</h3>
+                        <input type="range" min="1" max="100" value="50">
+                        <ul>
+                            <li id="pretMinim"> 100 lei</li>
+                            <li> - </li>
+                            <li id="pretMaxim"> 1000 lei</li>
+                        </ul>
+                    </div>
+                    <div class="conditie">
+                        <h3>Conditie</h3>
+                        <div class="containerConditii">
+                            <div class="buttonAdaugare formaButonAdaugare">+</div>
+                        </div>
+                    </div>
+                    <div class="categorie">
+                        <h3>Categorie</h3>
+                        <div class="containerCategorii">
+                            <div class="buttonAdaugare formaButonAdaugare"><p>+</p></div>
+                        </div>
+                    </div>
+                    <div class="judet">
+                        <h3>Judet</h3>
+                        <div class="containerJudete">
+                            <div class="buttonAdaugare formaButonAdaugare">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containerSortareAfisareProd">
+                <div class="containerSortare">
+                    <h3>Sortare dupa:</h3>
+                    <ul class="ordineSortare">
+                        <li class="formaButon">Pret</li>
+                        <li class="formaButon">Data publicare</li>
+                    </ul>
+                </div>
+                <div class="tipAfisare">
+                    <h3>Afisare</h3>
+                    <div>
+                        <button>1</button>
+                        <button>2</button>
+                    </div>
+                </div>
+                <div class="containerProduse">
+                    <div class="produs">
+                        <img src="/images/imgProduse/matrix.webp" alt="pozaProdus" class="pozaProdus">
+                        <p class="titluProdus">Matrix</p>
+                        <p class="pretProdus">90000 lei</p>
+                    </div>
+                    <div class="produs">
+                        <img src="/images/imgProduse/matrix.webp" alt="pozaProdus" class="pozaProdus">
+                        <p class="titluProdus">Matrix</p>
+                        <p class="pretProdus">90000 lei</p>
+                    </div>
+                    <div class="produs">
+                        <img src="/images/imgProduse/matrix.webp" alt="pozaProdus" class="pozaProdus">
+                        <p class="titluProdus">Matrix</p>
+                        <p class="pretProdus">90000 lei</p>
+                    </div>
+                </div>
+            </div>
+       </div> 
+    </body>
+</html>
