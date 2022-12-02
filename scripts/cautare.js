@@ -1,4 +1,5 @@
 let cautat = localStorage.getItem("cautat");
+let ceAmCautat = document.querySelectorAll("p")[1];
 
 window.onload = function() {
     let ceAmCautat = document.querySelectorAll("p")[1];
@@ -95,4 +96,11 @@ function arataOptiuniData()
         ordonareDataApasat = 0;
         ordonareData = "ASC";
     }
+}
+
+function cautare()
+{
+    cautat = document.querySelectorAll("input")[0].value;
+    let ceAmCautat = document.querySelectorAll("p")[1];
+    ceAmCautat.textContent= ` "${cautat}"`;
 }
