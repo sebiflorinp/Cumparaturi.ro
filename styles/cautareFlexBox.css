@@ -135,7 +135,9 @@ ul{
     align-items: center;
 }
 
-.ordineSortare{
+.ordineSortare,
+.dupaPret,
+.dupaData{
     display: flex;
     gap: 1em;
 }
