@@ -16,6 +16,8 @@ ul{
 .baraMeniu{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
 }
 
 .baraMeniu ul{
@@ -146,12 +148,15 @@ ul{
 {
     display: flex;
     flex: 1 1 auto;
-    justify-items: flex-start;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    gap: 1em;
 }
 .produs{
     display: flex;
     flex-flow: column nowrap;
     gap: 0.3em;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     align-items: center;
 }

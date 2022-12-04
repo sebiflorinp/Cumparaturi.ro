@@ -6,6 +6,16 @@ body{
     background-color: #f3f3f3;
 }
 
+a{
+    text-decoration-line: none;
+    color: black;
+}
+
+a:visited{
+    text-decoration-line: none;
+    color: black;
+}
+
 .baraMeniu li:hover{
     background-color: #dfdfdf;
 }
@@ -119,6 +129,6 @@ input{
 }
 
 .pozaProdus{
-    max-width: 20%;
-    
+    max-width: 225px;
+    min-width: 225px;
 }
