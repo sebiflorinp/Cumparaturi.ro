@@ -1,0 +1,14 @@
+[
+  {"idProdus": 1, "nume": "Pc", "cale":"1.webp", "promovat": true, "idCategorie": 1, "pret": 1000},
+  {"idProdus": 2, "nume": "Masina de spalat", "cale":"2.webp", "promovat": false, "idCategorie": 1, "pret": 2000},
+  {"idProdus": 3, "nume": "Tricou", "cale":"3.jpg", "promovat": false, "idCategorie": 2, "pret": 20},
+  {"idProdus": 4, "nume": "Pisica", "cale":"4.jpg", "promovat": true, "idCategorie": 7, "pret": 100},
+  {"idProdus": 5, "nume": "GTX 1650", "cale":"5.jpg", "promovat": true, "idCategorie": 1, "pret": 1600},
+  {"idProdus": 6, "nume": "Catel", "cale":"6.jpg", "promovat": false, "idCategorie": 7, "pret": 120},
+  {"idProdus": 7, "nume": "RX 5500 XT", "cale":"7.jpg", "promovat": true, "idCategorie": 1, "pret": 2000},
+  {"idProdus": 8, "nume": "Blugi", "cale":"8.webp", "promovat": true, "idCategorie": 2, "pret": 30},
+  {"idProdus": 9, "nume": "Dacia", "cale":"9.jpg", "promovat": false, "idCategorie": 3, "pret": 200000},
+  {"idProdus": 10, "nume": "Bloc", "cale":"10.jpg", "promovat": false, "idCategorie": 6, "pret": 100000000},
+  {"idProdus": 11, "nume": "Sarpe", "cale":"11.jpg", "promovat": false, "idCategorie": 7, "pret": 1600},
+  {"idProdus": 12, "nume": "Morometii", "cale":"12.jpg", "promovat": false, "idCategorie": 5, "pret": 10}
+]
