@@ -1,26 +1,23 @@
 <template>
   <div class="ceva">
     <div class="containerBaraCautare">
-      <input :class="paginaCurenta" type="text">
+      <input v-model="ceAmCautat" :class="paginaCurenta" type="text">
       <div :class="img"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
     </div>
   </div>
 </template>
 
-<script>
-  export default {
-    data(){
-      return {
-        paginaCurenta: "baraCautare",
-        img: "img"
-      }
-    },
+<script setup>
+  import { ref, onMounted } from 'vue'
 
-    mounted(){
-      this.paginaCurenta += this.$route.name == 'Cautare' ? ' baraCautarePCautare' : ''
-      this.img += this.$route.name == 'Cautare' ? ' imgPCautare' : ''
-    }
+  const paginaCurenta = ref("baraCautare")
+  const img = ref("img")
+  const ceAmCautat = ref('')
+
+  function cautare(){
+
   }
+
 </script>
 
 <style scoped>

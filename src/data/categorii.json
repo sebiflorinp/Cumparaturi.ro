@@ -1,9 +1,9 @@
 [
-  {"idCategorie": 1, "nume": "Electronice"},
-  {"idCategorie": 2, "nume": "Haine"},
-  {"idCategorie": 3, "nume": "Masini"},
-  {"idCategorie": 4, "nume": "Jucarii"},
-  {"idCategorie": 5, "nume": "Carti"},
-  {"idCategorie": 6, "nume": "Imobiliare"},
-  {"idCategorie": 7, "nume": "Animale"}
+  {"idCategorie": 1, "nume": "Electronice", "cale": "1.jpg"},
+  {"idCategorie": 2, "nume": "Haine", "cale": "2.jpg"},
+  {"idCategorie": 3, "nume": "Masini", "cale": "3.webp"},
+  {"idCategorie": 4, "nume": "Jucarii", "cale": "4.jpg"},
+  {"idCategorie": 5, "nume": "Carti", "cale": "5.jpg"},
+  {"idCategorie": 6, "nume": "Imobiliare", "cale": "6.jpg"},
+  {"idCategorie": 7, "nume": "Animale", "cale": "7.jpg"}
 ]

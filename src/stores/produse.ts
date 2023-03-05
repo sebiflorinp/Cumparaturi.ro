@@ -15,8 +15,17 @@ export const useProduse = defineStore("produse", {
     },
     returneazaCaleImagineDupaId(){
       return (id:number) => {
-        console.log(produse.filter( (produs:any) => produs.idProdus == id)[0].cale)
         return produse.filter( (produs:any) => produs.idProdus == id)
+      }
+    },
+    returneazaAnunturiPromovate(){
+      return () => {
+        return produse.filter( (produs:any) => produs.promovat == true).reverse()
+      }
+    },
+    returneazaAnunturiRecente(){
+      return () => {
+        return produse.slice().reverse()
       }
     }
   }

@@ -9,9 +9,9 @@ const routes: Array<RouteRecordRaw> = [
     component: PaginaPrincipala,
   },
   {
-    path: '/cautare/:cautat',
+    path: '/cautare/:nrPagina/:ceAmCautat',
     name: 'Cautare',
-    component: Cautare
+    component: Cautare,
   }
 ]
 

@@ -43,6 +43,11 @@ export const useCategorii = defineStore("categorii", {
       return (id:number) => {
         return categorii.filter( (categorie:any) => categorie.idCategorie == id )[0].nume
       }
+    },
+    returneazaCaleDupaId(){
+      return (id:number) => {
+        return categorii.filter( (categorie:any) => categorie.idCategorie == id)[0].cale
+      }
     }
   }
 })

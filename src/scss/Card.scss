@@ -7,15 +7,18 @@
   background-color: $culoare7;
   padding: 1em;
   border-radius: 17px;
-  min-height: 11vw;
+  min-height: 11em;
   gap: 0.2em;
   img {
+    $marimeImg: 10em;
     object-fit: cover;
-    max-width: 11vw;
-    min-height: 11vw;
+    max-width: $marimeImg;
+    min-height: $marimeImg;
+    min-width: $marimeImg;
+    max-height: $marimeImg;
   }
   .text {
-    font-size: 1.6vw;
+    font-size: 1.5em;
   }
 }
 

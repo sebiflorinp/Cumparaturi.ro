@@ -17,17 +17,19 @@ a {
   background-color: #616161;
   padding: 1em;
   border-radius: 17px;
-  min-height: 11vw;
+  min-height: 11em;
   gap: 0.2em;
 }
 .card img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 11vw;
-  min-height: 11vw;
+  max-width: 10em;
+  min-height: 10em;
+  min-width: 10em;
+  max-height: 10em;
 }
 .card .text {
-  font-size: 1.6vw;
+  font-size: 1.5em;
 }
 
 .card:hover {

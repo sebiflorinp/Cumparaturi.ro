@@ -2,9 +2,9 @@
   <p class="logo">CUMPARATURI.RO</p>
   <BaraCautare/>
   <p class="numeBaraProduse">Categorii populare</p>
-  <BaraProduse tip="categorie"/>
+  <BaraProduse tipBaraAnunturi="categorii"/>
   <p class="numeBaraProduse">Anunturi promovate</p>
-  <BaraProduse tip="produs"/>
+  <BaraProduse tipBaraAnunturi="produsePromovate"/>
   <p class="numeBaraProduse">Anunturi recente</p>
   <BaraProduse tip="produs"/>
 </template>
