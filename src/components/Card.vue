@@ -1,6 +1,6 @@
 <template>
   <router-link :to="idProdus ? '/produs/' + idProdus : '/categorie/' + idCategorie">
-    <div v-if="this.tip == 'categorie'" class="card">
+    <div v-if="tip == 'categorie'" class="card">
       <img :src="require('@/assets/categorii/' + dbCategorii.returneazaCaleDupaId(idCategorie))" alt="img">
       <p class="text"> {{ dbCategorii.gasesteCategorie(idCategorie) }} </p>
     </div>

@@ -7,7 +7,7 @@
   </div>
   <div class="containerRezultat">
     <p class="aiCautat">Ai cautat:</p>
-    <p class="rezultat">"{{ this.$route.params.cautat }}"</p>
+    <p class="rezultat">"{{ $route.params.cautat }}"</p>
   </div>
   <Filtre/>
 </template>
