@@ -27,6 +27,13 @@ export const useProduse = defineStore("produse", {
       return () => {
         return produse.slice().reverse()
       }
+    },
+    returneazaIdUtilizatorDupaProdus(){
+      return (idProdus:number) => {
+        return produse.filter( (produs:any) => {
+          return produs.idProdus == idProdus
+        })[0].idUtilizator
+      }
     }
   }
 })

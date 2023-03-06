@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import PaginaPrincipala from '../views/PaginaPrincipala.vue'
 import Cautare from '../views/Cautare.vue'
+import PaginaProdus from '../views/PaginaProdus.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cautare/:nrPagina/:ceAmCautat',
     name: 'Cautare',
     component: Cautare,
+  },
+  {
+    path: '/produs/:id',
+    name: 'Produs',
+    component: PaginaProdus,
   }
 ]
 

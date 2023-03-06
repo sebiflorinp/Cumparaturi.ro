@@ -27,8 +27,6 @@
   })
 
   function updateazaMarimi(){
-    inaltime.value = window.innerHeight
-    latime.value = window.innerWidth
     if(32 + nrCarduri.value*176 + 90*(nrCarduri.value - 1) > window.innerWidth){
       while(32 + nrCarduri.value*176 + 90*(nrCarduri.value - 1) > window.innerWidth)
         nrCarduri.value--

@@ -1,0 +1,94 @@
+@import './utils/culori';
+@import './utils/flexBox';
+@import './utils/font';
+@import './utils/reset';
+
+.containerInfomratiiProdusSiVanzator{
+  @include flexBox(row,space-between,center);
+  .containerProdus{
+    @include flexBox(column, center, center);
+    background-color: $culoare8;
+    padding: 1.2em;
+    border-radius: 17px;
+    max-width: 50%;
+    margin-left: 1.2em;
+    min-width: 50%;
+    gap: 1em;
+    .produs {
+      max-height: 30em;
+      min-width: auto;
+      min-height: 30em;
+      object-fit: cover;
+      padding: 0.7em;
+    }
+    .containerPoze{
+      @include flexBox(row, flex-start ,center);
+      background-color: $culoare9;
+      padding: 0.8em;
+      gap: 1em;
+      border-radius: 17px;
+      min-width: 100%;
+      .containerPoza{
+        @include flexBox(row, center, center);
+        background-color: $culoare8;
+        padding: 0.7em;
+        border-radius: 17px;
+        img {
+          border-radius: 17px;
+          max-width: 7em;
+          max-height: 7em;
+          min-height: 7em;
+          min-width: 7em;
+          object-fit: cover;
+        }
+      }
+      .containerPoza:hover {
+        background-color: $culoare7;
+      }
+      .containerPoza:active {
+        background-color: $culoare6;
+      }
+    }
+  }
+  .containerInformatii {
+    background-color: $culoare8;
+    padding: 1em;
+    border-radius: 17px;
+    .containerCuloareNegru {
+      @include flexBox(column, center, space-between);
+      background-color: $culoare9;
+      padding: 1em;
+      border-radius: 17px;
+      gap: 1em;
+      .containerInformatiiProfil{
+        background-color: $culoare8;
+        padding: 1em;
+        border-radius: 17px;
+        @include flexBox(row,center,center);
+        gap: 1em;
+        img {
+          border-radius: 17px;
+          max-height: 9em;
+        }
+        .containerAlteInformatii {
+          font-size: 1.6em;
+          @include flexBox(column, space-between, flex-start);
+          gap: 0.5em;
+        }
+      }
+      .containerInformatiiProdus{
+        @include flexBox(column,center,flex-start);
+        background-color: $culoare8;
+        border-radius: 17px;
+        padding: 1em;
+        font-size: 1.6em;
+        gap: 0.2em;
+      }
+    }
+  }
+  .containerTaguri {
+    background-color: $culoare8;
+    padding: 0.7em;
+    border-radius: 17px;
+  }
+}
