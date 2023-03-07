@@ -4,20 +4,21 @@
 @import './utils/reset';
 
 .containerInfomratiiProdusSiVanzator{
-  @include flexBox(row,space-between,center);
+  @include flexBox(row,space-between,flex-start);
+  gap: 2em;
   .containerProdus{
     @include flexBox(column, center, center);
     background-color: $culoare8;
     padding: 1.2em;
     border-radius: 17px;
-    max-width: 50%;
     margin-left: 1.2em;
-    min-width: 50%;
+    min-width: 48vw;
     gap: 1em;
+    max-height: 34em;
     .produs {
-      max-height: 30em;
+      max-height: 20em;
       min-width: auto;
-      min-height: 30em;
+      min-height: 20em;
       object-fit: cover;
       padding: 0.7em;
     }
@@ -54,17 +55,22 @@
     background-color: $culoare8;
     padding: 1em;
     border-radius: 17px;
+    min-height: 33.4em;
+    min-width: 45vw;
+    margin-right: 1em;
     .containerCuloareNegru {
-      @include flexBox(column, center, space-between);
+      @include flexBox(column, flex-start, space-between);
       background-color: $culoare9;
       padding: 1em;
       border-radius: 17px;
       gap: 1em;
+      min-width: 45vw;
+      min-height: 31em;
       .containerInformatiiProfil{
         background-color: $culoare8;
         padding: 1em;
         border-radius: 17px;
-        @include flexBox(row,center,center);
+        @include flexBox(row,flex-start,center);
         gap: 1em;
         img {
           border-radius: 17px;
@@ -90,5 +96,17 @@
     background-color: $culoare8;
     padding: 0.7em;
     border-radius: 17px;
+    .containerCuloareNegru{
+      @include flexBox(row,flex-start,center);
+      flex-wrap: wrap;
+      gap: 0.5em;
+      min-width: auto;
+      min-height: auto;
+      .tag{
+        background-color: $culoare8;
+        padding: 0.4em;
+        border-radius: 10px;
+      }
+    }
   }
 }

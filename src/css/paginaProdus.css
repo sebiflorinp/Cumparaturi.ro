@@ -25,7 +25,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2em;
 }
 .containerInfomratiiProdusSiVanzator .containerProdus {
   display: flex;
@@ -35,15 +36,15 @@ a {
   background-color: #424242;
   padding: 1.2em;
   border-radius: 17px;
-  max-width: 50%;
   margin-left: 1.2em;
-  min-width: 50%;
+  min-width: 48vw;
   gap: 1em;
+  max-height: 34em;
 }
 .containerInfomratiiProdusSiVanzator .containerProdus .produs {
-  max-height: 30em;
+  max-height: 20em;
   min-width: auto;
-  min-height: 30em;
+  min-height: 20em;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0.7em;
@@ -87,16 +88,21 @@ a {
   background-color: #424242;
   padding: 1em;
   border-radius: 17px;
+  min-height: 33.4em;
+  min-width: 45vw;
+  margin-right: 1em;
 }
 .containerInfomratiiProdusSiVanzator .containerInformatii .containerCuloareNegru {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: space-between;
   background-color: #212121;
   padding: 1em;
   border-radius: 17px;
   gap: 1em;
+  min-width: 45vw;
+  min-height: 31em;
 }
 .containerInfomratiiProdusSiVanzator .containerInformatii .containerCuloareNegru .containerInformatiiProfil {
   background-color: #424242;
@@ -104,7 +110,7 @@ a {
   border-radius: 17px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1em;
 }
@@ -135,4 +141,19 @@ a {
   background-color: #424242;
   padding: 0.7em;
   border-radius: 17px;
+}
+.containerInfomratiiProdusSiVanzator .containerTaguri .containerCuloareNegru {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  min-width: auto;
+  min-height: auto;
+}
+.containerInfomratiiProdusSiVanzator .containerTaguri .containerCuloareNegru .tag {
+  background-color: #424242;
+  padding: 0.4em;
+  border-radius: 10px;
 }/*# sourceMappingURL=paginaProdus.css.map */

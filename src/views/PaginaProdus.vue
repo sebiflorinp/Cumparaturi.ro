@@ -24,8 +24,10 @@
         </div>
         <div class="containerTaguri">
           <div class="containerCuloareNegru">
-            <p v-if="dbTaguri.returneazaProdus($route.params.id).promovat"> Promovat </p>
-            <p> {{ dbTaguri.returneazaTagCategorie($route.params.id) }} </p>
+            <p class ="tag" v-if="dbTaguri.returneazaProdus($route.params.id).promovat"> Promovat </p>
+            <p class="tag"> {{ dbTaguri.returneazaTagCategorie($route.params.id) }} </p>
+            <p class="tag"> {{ dbTaguri.returneazaStare($route.params.id) }}</p>
+            <p class="tag"> {{ dbTaguri.returneazaJudet($route.params.id) }}</p>
           </div>
         </div>
       </div>
