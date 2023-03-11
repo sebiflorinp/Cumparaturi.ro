@@ -5,5 +5,6 @@
   {"idCategorie": 4, "nume": "Jucarii", "cale": "4.jpg"},
   {"idCategorie": 5, "nume": "Carti", "cale": "5.jpg"},
   {"idCategorie": 6, "nume": "Imobiliare", "cale": "6.jpg"},
-  {"idCategorie": 7, "nume": "Animale", "cale": "7.jpg"}
+  {"idCategorie": 7, "nume": "Animale", "cale": "7.jpg"},
+  {"idCategorie": 8, "nume": "Diverse", "cale": "8.jpg"}
 ]

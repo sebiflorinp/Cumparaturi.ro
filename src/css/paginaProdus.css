@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 a {
   text-decoration-line: none;
 }
@@ -27,6 +31,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2em;
+  margin-top: 1em;
 }
 .containerInfomratiiProdusSiVanzator .containerProdus {
   display: flex;
@@ -117,6 +122,7 @@ a {
 .containerInfomratiiProdusSiVanzator .containerInformatii .containerCuloareNegru .containerInformatiiProfil img {
   border-radius: 17px;
   max-height: 9em;
+  max-width: 11em;
 }
 .containerInfomratiiProdusSiVanzator .containerInformatii .containerCuloareNegru .containerInformatiiProfil .containerAlteInformatii {
   font-size: 1.6em;
@@ -156,4 +162,29 @@ a {
   background-color: #424242;
   padding: 0.4em;
   border-radius: 10px;
+}
+
+.containerDescriereProdus {
+  background-color: #424242;
+  padding: 2em;
+  margin-top: 1em;
+}
+.containerDescriereProdus .labelDescriere {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.containerDescriereProdus .descriere {
+  font-size: 1.4em;
+}
+
+.containerAlteProduse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  gap: 1.5em;
+}
+.containerAlteProduse .labelAlteProduse {
+  font-size: 2.5em;
+  align-self: center;
 }/*# sourceMappingURL=paginaProdus.css.map */

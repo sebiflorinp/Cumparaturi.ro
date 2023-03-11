@@ -34,6 +34,11 @@ export const useProduse = defineStore("produse", {
           return produs.idProdus == idProdus
         })[0].idUtilizator
       }
+    },
+    returneazaDescriere(){
+      return (id:number) => {
+        return produse.find( (produs:any) => produs.idProdus == id)?.descriere
+      }
     }
   }
 })

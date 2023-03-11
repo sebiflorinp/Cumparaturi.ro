@@ -11,5 +11,8 @@
   {"idProdus": 10, "cale":"10.jpg", "idPoza": 10},
   {"idProdus": 11, "cale":"11.jpg", "idPoza": 11},
   {"idProdus": 12, "cale":"12.jpg", "idPoza": 12},
-  {"idProdus": 5, "cale":"13.jpg", "idPoza": 13}
+  {"idProdus": 5, "cale":"13.jpg", "idPoza": 13},
+  {"idProdus": 13, "cale":"14.webp", "idPoza": 14},
+  {"idProdus": 14, "cale":"15.jpg", "idPoza": 15},
+  {"idProdus": 15, "cale":"16.jpg", "idPoza": 16}
 ]

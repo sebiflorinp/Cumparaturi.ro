@@ -33,10 +33,19 @@
       </div>
     </div>
   </div>
+  <div class="containerDescriereProdus">
+    <p class="labelDescriere">Descriere:</p>
+    <p class="descriere"> {{ dbProduse.returneazaDescriere($route.params.id) }}</p>
+  </div>
+  <div class="containerAlteProduse">
+    <p class="labelAlteProduse">Alte produse de la acest utilizator</p>
+    <BaraProduse tipBaraAnunturi="alteProduseVanzator"/>
+  </div>
 </template>
 
 <script setup>
   import Card from '@/components/Card.vue'
+  import BaraProduse from '@/components/BaraProduse.vue'
   import { usePozeProduse } from '@/stores/pozeProduse.ts'
   import { useProduse } from '@/stores/produse.ts'
   import { useUtilizatori } from '@/stores/utilizatori.ts'

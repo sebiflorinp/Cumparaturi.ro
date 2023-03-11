@@ -2,7 +2,9 @@
   <div class="ceva">
     <div class="containerBaraCautare">
       <input v-model="ceAmCautat" :class="paginaCurenta" type="text">
-      <div :class="img"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
+      <router-link :to="'cautare/1/' + ceAmCautat">
+        <div :class="img"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
+      </router-link>
     </div>
   </div>
 </template>

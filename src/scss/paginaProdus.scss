@@ -6,6 +6,7 @@
 .containerInfomratiiProdusSiVanzator{
   @include flexBox(row,space-between,flex-start);
   gap: 2em;
+  margin-top: 1em;
   .containerProdus{
     @include flexBox(column, center, center);
     background-color: $culoare8;
@@ -75,6 +76,7 @@
         img {
           border-radius: 17px;
           max-height: 9em;
+          max-width: 11em;
         }
         .containerAlteInformatii {
           font-size: 1.6em;
@@ -109,4 +111,26 @@
       }
     }
   }
+}
+
+.containerDescriereProdus {
+  background-color: $culoare8;
+  padding: 2em;
+  margin-top: 1em;
+  .labelDescriere{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  .descriere{
+    font-size: 1.4em;  
+  }
+}
+
+.containerAlteProduse {
+  @include flexBox(column,center,space-between);
+  .labelAlteProduse {
+    font-size: 2.5em;
+    align-self: center;
+  }
+  gap: 1.5em;
 }
