@@ -1,8 +1,10 @@
 import { defineStore } from "pinia"
 
+
 export const useData = defineStore("data", {
   state: () => {
     return {
+      logat: false,
       categorii: [
         {"idCategorie": 1, "nume": "Electronice", "cale": "1.jpg", "activ":false},
         {"idCategorie": 2, "nume": "Haine", "cale": "2.jpg", "activ":false},
@@ -105,5 +107,6 @@ export const useData = defineStore("data", {
         { "idUtilizator":2, "nume": "Georgescu", "prenume": "George", "calePoza":"2.png", "email":"george@georgescu.com", "telefon":"0712345678", "parola":"parolaparola"}
       ]     
     }
-  }
+  },
+  persist: true
 })
