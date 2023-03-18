@@ -2,7 +2,7 @@
   <Header/>
   <RouterView/>
   <Footer/>
-  <ModalCont v-if="!date.logat"/>
+  <ModalCont v-if="date.accessareCont"/>
 </template>
 
 <script setup>

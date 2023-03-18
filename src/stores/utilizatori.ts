@@ -9,6 +9,14 @@ export const useUtilizatori = defineStore("utilizatori", {
 
   getters: {
 
+    returneazaInformatiiUtilizatorDupaId(){
+      return (idUtilizator:number) => {
+        return this.date.$state.utilizatori.find( (utilizator:any) => 
+          utilizator.idUtilizator == idUtilizator
+        )
+      }
+    },
+
     returneazaInformatiiUtilizatorDupaIdProdus(){
       return (idProdus:number) => {
         const idUtilizator = this.date.$state.produse.find( (produs:any) => produs.idProdus == idProdus)?.idUtilizator
@@ -40,6 +48,11 @@ export const useUtilizatori = defineStore("utilizatori", {
       return (email:string) => {
         return this.date.$state.utilizatori.find( (utilizator:any) => utilizator.email == email) ? false : true
       }
+    },
+    returneazaIdUtilizatorDupaEmail(){
+      return (email:string) => {
+        return this.date.$state.utilizatori.find( (utilizator:any) => utilizator.email == email).idUtilizator
+      }
     }
   },
 
@@ -55,14 +68,13 @@ export const useUtilizatori = defineStore("utilizatori", {
           parola:string
         }
         const utilizatorNou = {} as utilizator
-        console.log("fdgfd")
-        utilizatorNou.idUtilizator = 3
+        utilizatorNou.idUtilizator = this.date.$state.utilizatori.slice().reverse()[0].idUtilizator + 1
         utilizatorNou.nume = nume
         utilizatorNou.prenume = prenume
         utilizatorNou.email = email
         utilizatorNou.telefon = telefon
         utilizatorNou.parola = parola
-        utilizatorNou.calePoza = "fdsfsd"
+        utilizatorNou.calePoza = "defaultPhoto.jpg"
         this.date.utilizatori.push(utilizatorNou)
       }
     }

@@ -13,7 +13,7 @@
   .containerContinutModal {
     padding: 1em;
     .selectieLogareCreareCont {
-      @include flexBox(row,flex-start,center);
+      @include flexBox(row,flex-start,flex-start);
       div {
         font-size: 1.8vw;
         padding: 1em;
@@ -76,6 +76,21 @@
       }
       button:active {
         background-color: $culoare5;
+      }
+      .containerInformatiiUtilizator {
+        @include flexBox(row,flex-start,center);
+        gap: 1em;
+        img {
+          border-radius: 17px;
+          width: 10vw;
+        }
+        .informatii {
+          @include flexBox(column, flex-start, flex-start);
+          gap: 0.5em;
+        }
+      }
+      .mesajAvertizareCreareCont {
+        align-self: center;
       }
     }
   }

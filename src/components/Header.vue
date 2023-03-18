@@ -1,24 +1,24 @@
 <template>
   <div class="header">
-    <RouterLink :to ="{name: 'Pagina principala'}" class="logoIntoarcere" v-if="!afisez">Cumparaturi.ro</RouterLink>
+    <RouterLink :to ="{name: 'Pagina principala'}" class="logoIntoarcere" v-if="$route.name != 'Pagina principala'">Cumparaturi.ro</RouterLink>
     <p v-else></p>
     <ul class="containerButoane">
-      <li class="buton"><a href="http://localhost:8080/cautare">Cont</a></li>
-      <li class="buton">Cos</li>
+      <li @click="apasareCont" class="buton">Cont</li>
       <li class="buton">Vinde</li>
       <li class="buton">Setari</li>
     </ul>
   </div>
 </template>
 
-<script>
-  export default {
-    computed: {
-      afisez(){
-        return this.$route.name == "Pagina principala" ? true : false
-      }
-    }
+<script setup>
+  import { useData } from "@/stores/date.ts"
+
+  const dbDate = useData()
+
+  function apasareCont(){
+    dbDate.accessareCont = true
   }
+
 </script>
 
 <style scoped>

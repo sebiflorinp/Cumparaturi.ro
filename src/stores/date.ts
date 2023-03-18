@@ -5,6 +5,8 @@ export const useData = defineStore("data", {
   state: () => {
     return {
       logat: false,
+      accessareCont: false,
+      idUtilizatorLogat: 0,
       categorii: [
         {"idCategorie": 1, "nume": "Electronice", "cale": "1.jpg", "activ":false},
         {"idCategorie": 2, "nume": "Haine", "cale": "2.jpg", "activ":false},

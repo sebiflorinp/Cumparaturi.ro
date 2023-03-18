@@ -43,7 +43,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .backgroundModal .containerContinutModal .selectieLogareCreareCont div {
   font-size: 1.8vw;
@@ -110,4 +110,25 @@ a {
 }
 .backgroundModal .containerContinutModal .continut button:active {
   background-color: #9E9E9E;
+}
+.backgroundModal .containerContinutModal .continut .containerInformatiiUtilizator {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+.backgroundModal .containerContinutModal .continut .containerInformatiiUtilizator img {
+  border-radius: 17px;
+  width: 10vw;
+}
+.backgroundModal .containerContinutModal .continut .containerInformatiiUtilizator .informatii {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+.backgroundModal .containerContinutModal .continut .mesajAvertizareCreareCont {
+  align-self: center;
 }/*# sourceMappingURL=ModalCont.css.map */

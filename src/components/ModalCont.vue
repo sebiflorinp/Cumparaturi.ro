@@ -1,16 +1,26 @@
 <template>
-  <div class="backgroundModal">
+  <div @click.self="dbDate.accessareCont = false" class="backgroundModal">
     <div class="containerContinutModal">
       <div class="selectieLogareCreareCont">
         <div @click="logare = true" class="Logare" :class="{ activ:logare}">
-          <p class="labelLogare">Logare</p>
+          <p class="labelLogare">{{ dbDate.logat ? 'Cont' : 'Logare'  }}</p>
         </div>
-        <div @click=" logare = false" class="CreareCont" :class="{ activ:!logare}">
+        <div v-if="!dbDate.logat" @click=" logare = false" class="CreareCont" :class="{ activ:!logare}">
           <p class="labelCreareCont">Creare cont</p>
         </div>
       </div>
-      <div v-if="logare && incercat && logareReusita" class="continut">
-        <p class="mesajFelicitare">Logare Reusita!</p>
+      <div v-if="logare && dbDate.logat" class="continut">
+        <div class="containerInformatiiUtilizator">
+          <div class="containerPozaProfil">
+            <img :src="require('@/assets/pozeProfil/' + dbUtilizatori.returneazaPozaProfilDupaId(dbDate.idUtilizatorLogat))" alt="pozaProfil">
+          </div>
+          <div class="informatii">
+            <p>Utilizator: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaId(dbDate.idUtilizatorLogat).nume }} {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaId(dbDate.idUtilizatorLogat).prenume }}</p>
+            <p>Email: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaId(dbDate.idUtilizatorLogat).email }} </p>
+            <p>Telefon: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaId(dbDate.idUtilizatorLogat).telefon }} </p>
+          </div>
+        </div>
+        <button @click="dbDate.logat = false">Delogare</button>
       </div>
       <div v-else-if="logare" class="continut">
         <p class="labelLogareEmail">Email</p>
@@ -20,7 +30,7 @@
         <p v-if="logareReusita == false && incercat == true" class="mesajAvertizare">Datele introduse sunt gresite</p>
         <button @click="incercareLogare()" type="submit">Logare</button>
       </div>
-      <div v-else class="continut">
+      <div v-else-if="creareContReusit == false" class="continut">
         <p class="labelCCNume">Nume (4-12 caractere)</p>
         <input v-model="numeCC" type="text">
         <p class="labelCCPrenume">Prenume (4-12 caractere)</p>
@@ -30,26 +40,32 @@
         <p class="labelCCTelefon">Telefon</p>
         <input v-model="telefonCC" type="text">
         <p class="labelCCParola">Parola (4-12 caractere)</p>
-        <input v-model="parola1CC" type="text">
+        <input v-model="parola1CC" type="password">
         <p class="labelCCConfirmareParola">Confirmare parola</p>
-        <input v-model="parola2CC" type="text">
-        <button @click=" verificareDateCreareCont() == true ? dbUtilizatori.creareCont(numeCC,prenumeCC,emailCC,telefonCC,parola1CC) : mesajCreareCont = verificareDateCreareCont()" type="submit">Creare cont</button>
+        <input v-model="parola2CC" type="password">
+        <p class="mesajAvertizareCreareCont"> {{ mesajCreareCont }}</p>
+        <button @click=" verificareDateCreareCont() == true ? creareCont() : mesajCreareCont = verificareDateCreareCont()" type="submit">Creare cont</button>
       </div>
-      <p> {{ mesajCreareCont }}</p>
+      <div v-else class="continut">
+        <p class="mesajFelicitare">Contul a fost creat cu success</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
   import { useUtilizatori } from '@/stores/utilizatori.ts'
+  import { useData } from '@/stores/date.ts'
   import { ref } from 'vue'
 
   const dbUtilizatori = useUtilizatori()
+  const dbDate = useData()
+
   const logare = ref(true)
   const emailLogare = ref("")
   const parolaLogare = ref("")
   const incercat = ref(false)
-  const logareReusita = ref(false)
+
   const numeCC = ref("")
   const prenumeCC = ref("")
   const emailCC = ref("")
@@ -61,8 +77,9 @@
 
 
   function incercareLogare(){
-    logareReusita.value = dbUtilizatori.verificareDateLogare(emailLogare.value, parolaLogare.value)
+    dbDate.logat = dbUtilizatori.verificareDateLogare(emailLogare.value, parolaLogare.value)
     incercat.value = true
+    dbDate.idUtilizatorLogat = dbUtilizatori.returneazaIdUtilizatorDupaEmail(emailLogare.value)
   }
 
   function verificareDateCreareCont(){
@@ -76,6 +93,11 @@
     return "Nu s-au completat toate campurile"
     return true
   } 
+
+  function creareCont(){
+    dbUtilizatori.creareCont(numeCC.value,prenumeCC.value,emailCC.value,telefonCC.value,parola1CC.value)
+    creareContReusit.value = true
+  }
 
 </script>
 
