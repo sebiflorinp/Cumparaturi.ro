@@ -1,11 +1,13 @@
 import { defineStore } from "pinia"
-import produse from '@/data/produse.json'
-import categorii from '@/data/categorii.json'
+import { useData } from "./date"
 
 export const useCategorii = defineStore("categorii", {
+
   state: () => {
-    return { categorii }
+    const date = useData()
+    return { date }
   },
+
   getters: {
     categoriePopulara(){
       return (nrCategorie:number) => {
@@ -26,9 +28,11 @@ export const useCategorii = defineStore("categorii", {
           {id:14, nrAparitii:0}, 
           {id:15, nrAparitii:0} 
         ]
-        produse.forEach((produs:any) => {
+
+        this.date.$state.produse.forEach((produs:any) => {
           aparitii[produs.idCategorie-1].nrAparitii+=1
         })
+
         for(let i = 0; i < aparitii.length - 1; i++)
           for(let j = i; j < aparitii.length; j++)
             if(aparitii[i].nrAparitii <  aparitii[j].nrAparitii){
@@ -36,18 +40,16 @@ export const useCategorii = defineStore("categorii", {
               aparitii[i] = aparitii[j]
               aparitii[j] = aux 
             }
+
         return aparitii[nrCategorie].id
       }
     },
-    gasesteCategorie(){
-      return (id:number) => {
-        return categorii.filter( (categorie:any) => categorie.idCategorie == id )[0].nume
-      }
-    },
-    returneazaCaleDupaId(){
-      return (id:number) => {
-        return categorii.filter( (categorie:any) => categorie.idCategorie == id)[0].cale
+
+    returneazaDateCategorieDupaId(){
+      return (idCategorie:number) => {
+        return this.date.$state.categorii.find( (categorie:any) => categorie.idCategorie == idCategorie)
       }
     }
+
   }
 })

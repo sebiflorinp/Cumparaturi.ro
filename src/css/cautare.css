@@ -38,4 +38,125 @@ a {
   background-color: #424242;
   padding: 0.5em;
   font-size: 26px;
+}
+
+.containerFiltreSiAnunturi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 1.3em;
+}
+.containerFiltreSiAnunturi .filtre {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6em;
+  background-color: #424242;
+  padding: 1em;
+  border-radius: 17px;
+}
+.containerFiltreSiAnunturi .filtre .labelFiltre {
+  font-size: 2.5em;
+}
+.containerFiltreSiAnunturi .filtre button {
+  background-color: #616161;
+  border: #616161;
+  min-width: 13.4em;
+  padding: 0.4em;
+  border-radius: 14px;
+  font-size: 1.3em;
+  margin-bottom: 0.3em;
+}
+.containerFiltreSiAnunturi .filtre button:hover {
+  background-color: #757575;
+}
+.containerFiltreSiAnunturi .filtre button:active {
+  background-color: #9E9E9E;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  gap: 1em;
+  background-color: #212121;
+  min-width: 17.5em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border-radius: 17px;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  background-color: #424242;
+  padding: 1em;
+  border-radius: 17px;
+  gap: 0.5em;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .labelFiltru {
+  font-size: 2em;
+  align-self: center;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax p {
+  font-size: 1.3em;
+}
+.containerFiltreSiAnunturi .container {
+  margin-left: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 99%;
+  background-color: #424242;
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 17px;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare p {
+  font-size: 2em;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare .containerFormeDeOrdonare {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare .containerFormeDeOrdonare button {
+  background-color: #616161;
+  border-color: transparent;
+  padding: 0.4em;
+  border-radius: 17px;
+  font-size: 1.1em;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare .containerFormeDeOrdonare button:hover {
+  background-color: #757575;
+}
+.containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare .containerFormeDeOrdonare button:active {
+  background-color: #9E9E9E;
 }/*# sourceMappingURL=cautare.css.map */

@@ -53,10 +53,10 @@ a {
   background-color: #424242;
   max-height: 3em;
 }
-.containerBaraCautare .baraCautarePCautare {
+.containerBaraCautare .pCautare {
   min-width: 95vw;
   background-color: #616161;
-  min-height: 2em;
+  min-height: 2.15em;
 }
 .containerBaraCautare .imgPCautare {
   background-color: #616161;

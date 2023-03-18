@@ -1,26 +1,26 @@
 <template>
   <div class="containerInfomratiiProdusSiVanzator">
     <div class="containerProdus">
-      <img class="produs" :src="require('@/assets/pozeProduse/' + dbPozeProduse.returneazaCalaImagineDupaId($route.params.id, imagine))" alt="imgProdus">
+      <img class="produs" :src="require('@/assets/pozeProduse/' + dbProduse.returneazaPozeProdusDupaId($route.params.id)[imagine].cale)" alt="imgProdus">
       <div class="containerPoze">
-        <div @click="schimbaImagine(index-1)" v-for="index in dbPozeProduse.returneazaObiectPozeProdusDupaId($route.params.id).length" class="containerPoza">
-          <img  :src="require('@/assets/pozeProduse/' + dbPozeProduse.returneazaObiectPozeProdusDupaId($route.params.id)[index - 1].cale)" alt="img">
+        <div @click="schimbaImagine(index-1)" v-for="index in dbProduse.returneazaPozeProdusDupaId($route.params.id).length" class="containerPoza">
+          <img  :src="require('@/assets/pozeProduse/' + dbProduse.returneazaPozeProdusDupaId($route.params.id)[index - 1].cale)" alt="img">
         </div>
       </div>
     </div>
     <div class="containerInformatii">
       <div class="containerCuloareNegru">
         <div class="containerInformatiiProfil">
-            <img :src="require('@/assets/pozeProfil/' + dbUtilizatori.returneazaPozaProfilDupaId(dbProduse.returneazaIdUtilizatorDupaProdus($route.params.id)))" alt="imgProfil">
+          <img :src="require('@/assets/pozeProfil/' + dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus($route.params.id).calePoza)" alt="imgProfil">
           <div class="containerAlteInformatii">
-            <p class="numePrenumeUtilizator"> Utilizator: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus(dbProduse.returneazaIdUtilizatorDupaProdus($route.params.id))[0].nume }} {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus(dbProduse.returneazaIdUtilizatorDupaProdus($route.params.id))[0].prenume }}</p>
-            <p class="numeTel">Telefon: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus(dbProduse.returneazaIdUtilizatorDupaProdus($route.params.id))[0].telefon }}</p>
-            <p class="email">Email: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus(dbProduse.returneazaIdUtilizatorDupaProdus($route.params.id))[0].email }}</p>
+            <p class="numePrenumeUtilizator"> Utilizator: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus($route.params.id).nume }} {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus($route.params.id).prenume }}</p>
+            <p class="numeTel">Telefon: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus($route.params.id).telefon }}</p>
+            <p class="email">Email: {{ dbUtilizatori.returneazaInformatiiUtilizatorDupaIdProdus($route.params.id).email }}</p>
           </div>
         </div>
         <div class="containerInformatiiProdus">
-          <p> Produs: {{ dbProduse.gasesteProdusDupaId($route.params.id)[0].nume }}</p>
-          <p> Pret: {{ dbProduse.gasesteProdusDupaId($route.params.id)[0].pret }} lei</p>
+          <p> Produs: {{ dbProduse.returneazaProdusDupaId($route.params.id).nume }}</p>
+          <p> Pret: {{ dbProduse.returneazaProdusDupaId($route.params.id).pret }} lei</p>
         </div>
         <div class="containerTaguri">
           <div class="containerCuloareNegru">
@@ -35,7 +35,7 @@
   </div>
   <div class="containerDescriereProdus">
     <p class="labelDescriere">Descriere:</p>
-    <p class="descriere"> {{ dbProduse.returneazaDescriere($route.params.id) }}</p>
+    <p class="descriere"> {{ dbProduse.returneazaProdusDupaId($route.params.id).descriere }}</p>
   </div>
   <div class="containerAlteProduse">
     <p class="labelAlteProduse">Alte produse de la acest utilizator</p>
@@ -46,13 +46,13 @@
 <script setup>
   import Card from '@/components/Card.vue'
   import BaraProduse from '@/components/BaraProduse.vue'
-  import { usePozeProduse } from '@/stores/pozeProduse.ts'
+
   import { useProduse } from '@/stores/produse.ts'
   import { useUtilizatori } from '@/stores/utilizatori.ts'
   import { useTaguri } from '@/stores/taguri.ts'
+
   import { ref } from 'vue'
 
-  const dbPozeProduse = usePozeProduse()
   const dbProduse = useProduse()
   const dbUtilizatori = useUtilizatori()
   const dbTaguri = useTaguri()
@@ -62,7 +62,6 @@
   function schimbaImagine(nr){
     imagine.value = nr
   }
-
 </script>
 
 <style>

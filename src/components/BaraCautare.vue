@@ -1,12 +1,10 @@
 <template>
-  <div class="ceva">
     <div class="containerBaraCautare">
-      <input v-model="ceAmCautat" :class="paginaCurenta" type="text">
-      <router-link :to="'cautare/1/' + ceAmCautat">
-        <div :class="img"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
+      <input v-model="ceAmCautat" :class="$route.name == 'Pagina principala' ? 'baraCautare' : 'baraCautare pCautare'" type="text">
+      <router-link :to=" $route.name == 'Pagina principala' ? 'cautare/1/' + ceAmCautat : ceAmCautat">
+        <div :class="$route.name == 'Pagina principala' ? 'img' : 'img imgPCautare'"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
       </router-link>
     </div>
-  </div>
 </template>
 
 <script setup>

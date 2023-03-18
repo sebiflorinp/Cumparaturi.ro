@@ -22,3 +22,98 @@
   padding: 0.5em;
   font-size: 26px;
 }
+
+.containerFiltreSiAnunturi {
+  @include flexBox(row, flex-start, flex-start);
+  padding-left: 1.3em;
+  .filtre{
+    @include flexBox(column, flex-start, center);
+    gap: 0.6em;
+    background-color: $culoare8;
+    padding: 1em;
+    border-radius: 17px;
+    .labelFiltre {
+      font-size: 2.5em;
+    }
+    button {
+      background-color: $culoare7;
+      border: $culoare7;
+      min-width: 13.4em;
+      padding: 0.4em;
+      border-radius: 14px;
+      font-size: 1.3em;
+      margin-bottom: 0.3em;
+    }
+    button:hover {
+      background-color: $culoare6; 
+    }
+    button:active {
+      background-color: $culoare5;
+    }
+    .backgroundFiltre {
+      @include flexBox(column, flex-start, space-between);
+      gap: 1em;
+      background-color: $culoare9;
+      min-width: 17.5em;
+      margin-bottom: 0.5em;
+      padding: 1em;
+      border-radius: 17px;
+      .filtru {
+        @include flexBox(column, flex-start, space-between);
+        background-color: $culoare8;
+        padding: 1em;
+        border-radius: 17px;
+        gap: 0.5em;
+        .labelFiltru {
+          font-size: 2em;
+          align-self: center;
+        }
+        .containerPretMinPretMax {
+          @include flexBox(column,flex-start,flex-start);
+          gap: 0.5em;
+          p{
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+  }
+  .container{
+    margin-left: 1em;
+    width: 100%;
+    @include flexBox(column,flex-start, stretch);
+    .containerProduseSiOrdonare {
+      @include flexBox(row,space-between,center);
+      width: 99%;
+      background-color: $culoare8;
+      padding: 1em;
+      margin-right: 1em;
+      border-radius: 17px;
+      .containerOrdonare {
+        @include flexBox(row,space-between,center);
+        width: 100%;
+        p{
+          font-size: 2em;
+        }
+        .containerFormeDeOrdonare {
+          @include flexBox(row,flex-start,center);
+          gap: 1em;
+          button {
+            background-color: $culoare7;
+            border-color: transparent;
+            padding: 0.4em;
+            border-radius: 17px;
+            font-size: 1.1em;
+          }
+          button:hover {
+            background-color: $culoare6;
+          }
+          button:active {
+            background-color: $culoare5;
+          }
+        }
+      }
+    }  
+  }
+}
+
