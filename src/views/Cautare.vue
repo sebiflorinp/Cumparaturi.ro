@@ -60,7 +60,7 @@
   import { useFiltre } from '@/stores/filtre.ts'
   import { useData } from '@/stores/date.ts'
 
-  import { onUpdated, onMounted, ref } from 'vue'
+  import { onUpdated, onMounted, onUnmounted, ref } from 'vue'
 
   import BaraCautare from '@/components/BaraCautare.vue'
   import Card from '@/components/Card.vue'
@@ -79,6 +79,10 @@
   })
   onUpdated( () => {
     dbDate.ceAmCautat = props.ceAmCautat
+  })
+
+  onUnmounted( () => {
+    dbFiltre.resetareFiltreActive()
   })
 
 

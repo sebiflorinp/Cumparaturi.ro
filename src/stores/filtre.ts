@@ -147,6 +147,17 @@ export const useFiltre = defineStore('filtre', {
         if(judet.idJudet == id)
           judet.activ = !judet.activ
       })
+    },
+    resetareFiltreActive(){
+      this.date.$state.categorii.forEach( (categorie:any) => {
+        categorie.activ = false
+      })
+      this.date.$state.judete.forEach( (judet:any) =>{
+        judet.activ = false
+      })
+      this.date.$state.stari.forEach( (stare:any ) =>{
+        stare.activ=false
+      })
     }
   }
 

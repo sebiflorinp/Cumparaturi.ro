@@ -87,6 +87,10 @@
       return "Parolele nu corespund"
     if(!dbUtilizatori.verificaEmailDisponibil(emailCC.value))
       return "Emailul este luat"
+    if(!/^\d+$/.test(telefonCC.value))
+      return "Numarul de telefon poate contine doar cifre"
+    if(!emailCC.value.includes("@"))
+      return "Emailul trebuie sa contine caracterul @"
     if(numeCC.value.length < 4 || prenumeCC.value.length < 4 || parola1CC.value.length < 4)
       return "Datele introduse nu respecta restrictiile mentionate"
     if(numeCC.value == "" || prenumeCC.value == "" || emailCC.value == "" || telefonCC.value == "" || parola1CC.value == "" || parola2CC.value == "")
