@@ -57,9 +57,10 @@ a {
   background-color: #424242;
   padding: 1em;
   border-radius: 17px;
+  min-width: 20em;
 }
 .containerFiltreSiAnunturi .filtre .labelFiltre {
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 .containerFiltreSiAnunturi .filtre button {
   background-color: #616161;
