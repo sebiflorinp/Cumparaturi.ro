@@ -4,7 +4,7 @@
     <p v-else></p>
     <ul class="containerButoane">
       <li @click="apasareCont" class="buton">Cont</li>
-      <li class="buton">Vinde</li>
+      <li @click="apasareVinde" class="buton">Vinde</li>
       <li class="buton">Setari</li>
     </ul>
   </div>
@@ -17,6 +17,10 @@
 
   function apasareCont(){
     dbDate.accessareCont = true
+  }
+
+  function apasareVinde(){
+    dbDate.accesareVinde = true
   }
 
 </script>

@@ -1,0 +1,99 @@
+@import './utils/culori';
+@import './utils/flexBox';
+@import './utils/font';
+@import './utils//reset';
+
+.backgroundModal{
+  @include flexBox(column, center, center);
+  top:0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  .labele {
+    @include flexBox(row,flex-start,center);
+    p{
+      background-color: $culoare8;
+      padding: 0.8em;
+      border-top-right-radius: 17px;
+      border-top-left-radius: 17px;
+      font-size: 1.7vw;
+    }
+  }
+  .containerAdaugareInformatii {
+    @include flexBox(column, flex-start, flex-start);
+    background-color: $culoare8;
+    padding: 1em;
+    border-radius: 0px 17px 17px 17px;
+    min-width: 60vw;
+    font-size: 1.7vw;
+    gap: 0.3em;
+    .mesajFelicitare{
+      color: rgb(0, 255, 0);
+      align-self: center;
+    }
+    .mesajAvertizare{
+      color: rgb(255, 0, 0);
+      align-self: center;
+    }
+    input {
+      background-color: $culoare9;
+      font-size: 1.5vw;
+      padding: 0.5vw;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      min-width: 100%;
+    }
+    .containerPromovat {
+      @include flexBox(row,flex-start,center);
+      input.checkBox[type='checkbox'] {
+        background-color: $culoare8;
+        min-width: auto;
+        margin-top: 0.2em;
+        margin-left: 0.3em;
+      }
+      
+    }
+    .containerTaguri {
+      @include flexBox(row, flex-start, center);
+      flex-wrap: wrap;
+      max-width: 60vw;
+      gap: 0.2em;
+      .tag {
+        font-size: 0.62em;
+        padding: 0.15em;
+        background-color: $culoare7;
+        border-radius: 8px;
+        border-style: solid;
+        border-width: 0.1em;
+      }
+      .activ {
+        color: rgb(2, 255, 2);
+      }
+      .tag:hover {
+        background-color: $culoare6;
+      }
+      .tag:active {
+        background-color: $culoare5;
+      }
+    }
+    button {
+      background-color: $culoare7;
+      padding: 0.8em;
+      font-size: 1.2vw;
+      border-radius: 13px;
+      border: none;
+      align-self: center;
+      margin-top: 0.5em;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+    button:hover {
+      background-color: $culoare6;
+    }
+    button:active {
+      background-color: $culoare5;
+    }
+  }
+}

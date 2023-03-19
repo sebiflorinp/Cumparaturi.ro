@@ -6,6 +6,7 @@ export const useData = defineStore("data", {
     return {
       logat: false,
       accessareCont: false,
+      accesareVinde: false,
       idUtilizatorLogat: 0,
       categorii: [
         {"idCategorie": 1, "nume": "Electronice", "cale": "1.jpg", "activ":false},

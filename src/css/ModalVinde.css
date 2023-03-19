@@ -1,0 +1,135 @@
+* {
+  color: #F5F5F5;
+}
+
+.logo {
+  font-size: 7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.backgroundModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.backgroundModal .labele {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.backgroundModal .labele p {
+  background-color: #424242;
+  padding: 0.8em;
+  border-top-right-radius: 17px;
+  border-top-left-radius: 17px;
+  font-size: 1.7vw;
+}
+.backgroundModal .containerAdaugareInformatii {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #424242;
+  padding: 1em;
+  border-radius: 0px 17px 17px 17px;
+  min-width: 60vw;
+  font-size: 1.7vw;
+  gap: 0.3em;
+}
+.backgroundModal .containerAdaugareInformatii .mesajFelicitare {
+  color: rgb(0, 255, 0);
+  align-self: center;
+}
+.backgroundModal .containerAdaugareInformatii .mesajAvertizare {
+  color: rgb(255, 0, 0);
+  align-self: center;
+}
+.backgroundModal .containerAdaugareInformatii input {
+  background-color: #212121;
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  min-width: 100%;
+}
+.backgroundModal .containerAdaugareInformatii .containerPromovat {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.backgroundModal .containerAdaugareInformatii .containerPromovat input.checkBox[type=checkbox] {
+  background-color: #424242;
+  min-width: auto;
+  margin-top: 0.2em;
+  margin-left: 0.3em;
+}
+.backgroundModal .containerAdaugareInformatii .containerTaguri {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 60vw;
+  gap: 0.2em;
+}
+.backgroundModal .containerAdaugareInformatii .containerTaguri .tag {
+  font-size: 0.62em;
+  padding: 0.15em;
+  background-color: #616161;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 0.1em;
+}
+.backgroundModal .containerAdaugareInformatii .containerTaguri .activ {
+  color: rgb(2, 255, 2);
+}
+.backgroundModal .containerAdaugareInformatii .containerTaguri .tag:hover {
+  background-color: #757575;
+}
+.backgroundModal .containerAdaugareInformatii .containerTaguri .tag:active {
+  background-color: #9E9E9E;
+}
+.backgroundModal .containerAdaugareInformatii button {
+  background-color: #616161;
+  padding: 0.8em;
+  font-size: 1.2vw;
+  border-radius: 13px;
+  border: none;
+  align-self: center;
+  margin-top: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.backgroundModal .containerAdaugareInformatii button:hover {
+  background-color: #757575;
+}
+.backgroundModal .containerAdaugareInformatii button:active {
+  background-color: #9E9E9E;
+}/*# sourceMappingURL=ModalVinde.css.map */
