@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="idProdus ? '/produs/' + idProdus : '/categorie/' + idCategorie">
+  <router-link :to="idProdus ? '/produs/' + idProdus : {name: 'Cautare'}">
       <div v-if="tip == 'categorie'" class="card">
         <img :src="require('@/assets/categorii/' + dbCategorii.returneazaDateCategorieDupaId(idCategorie).cale)" alt="img">
         <p class="text"> {{ dbCategorii.returneazaDateCategorieDupaId(idCategorie).nume }} </p>
@@ -15,12 +15,14 @@
 <script setup>
   import { useCategorii } from '@/stores/categorii'
   import { useProduse } from '@/stores/produse'
+  import { useData } from '@/stores/date.ts'
   import { ref } from 'vue'
 
   const props = defineProps(['tip', 'idCategorie', 'idProdus'])
   
   const dbCategorii = useCategorii()
   const dbProduse = useProduse()
+  const dbDate = useData()
 
 </script>
 

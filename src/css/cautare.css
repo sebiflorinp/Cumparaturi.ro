@@ -101,6 +101,28 @@ a {
   font-size: 2em;
   align-self: center;
 }
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerTaguri {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  max-width: 13em;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerTaguri .tag {
+  padding: 0.2em;
+  border-radius: 7px;
+  background-color: #616161;
+  border: solid;
+  border-width: 0.1em;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerTaguri .tag:hover {
+  background-color: #757575;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerTaguri .tag:active {
+  background-color: #9E9E9E;
+}
 .containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax {
   display: flex;
   flex-direction: column;
@@ -110,6 +132,23 @@ a {
 }
 .containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax p {
   font-size: 1.3em;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax input {
+  background-color: #616161;
+  border-color: transparent;
+  border-radius: 7px;
+  padding: 0.2em;
+  font-size: 1.04em;
+  outline: none;
+  margin-top: 0.1em;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0px;
+  outline: none;
+}
+.containerFiltreSiAnunturi .filtre .backgroundFiltre .filtru .containerPretMinPretMax input:active {
+  outline: none;
 }
 .containerFiltreSiAnunturi .container {
   margin-left: 1em;
@@ -159,4 +198,16 @@ a {
 }
 .containerFiltreSiAnunturi .container .containerProduseSiOrdonare .containerOrdonare .containerFormeDeOrdonare button:active {
   background-color: #9E9E9E;
+}
+.containerFiltreSiAnunturi .container .containerAnunturi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+  padding-top: 0em;
+  flex-wrap: wrap;
+  -moz-column-gap: 7em;
+       column-gap: 7em;
+  row-gap: 2em;
 }/*# sourceMappingURL=cautare.css.map */

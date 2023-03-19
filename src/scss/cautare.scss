@@ -68,11 +68,47 @@
           font-size: 2em;
           align-self: center;
         }
+        .containerTaguri {
+          @include flexBox(row,center,center);
+          flex-wrap: wrap;
+          gap: 0.4em;
+          max-width: 13em;
+          .tag {
+            padding: 0.2em;
+            border-radius: 7px;
+            background-color: $culoare7;
+            border: solid;
+            border-width: 0.1em;
+          }
+          .tag:hover {
+            background-color: $culoare6;
+          }
+          .tag:active {
+            background-color: $culoare5;
+          }
+        }
         .containerPretMinPretMax {
           @include flexBox(column,flex-start,flex-start);
           gap: 0.5em;
           p{
             font-size: 1.3em;
+          }
+          input {
+            background-color: $culoare7;
+            border-color: transparent;
+            border-radius: 7px;
+            padding: 0.2em;
+            font-size: 1.04em;
+            outline: none;
+            margin-top: 0.1em;
+          }
+          input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0px;
+            outline: none;
+          }
+          input:active {
+            outline: none;
           }
         }
       }
@@ -113,6 +149,14 @@
           }
         }
       }
+    }
+    .containerAnunturi {
+      @include flexBox(row, flex-start, center);
+      padding: 1em;
+      padding-top: 0em;
+      flex-wrap: wrap;
+      column-gap: 7em;
+      row-gap: 2em;
     }  
   }
 }

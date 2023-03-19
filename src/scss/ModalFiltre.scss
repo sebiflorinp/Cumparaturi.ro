@@ -1,0 +1,54 @@
+@import './utils/culori';
+@import './utils/flexBox';
+@import './utils/font';
+@import './utils//reset';
+
+.backgroundModal{
+  @include flexBox(column, center, center);
+  top:0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  .containerContinutModal {
+    .containerAlegeri {
+      @include flexBox(row,flex-start,center);
+      .alegere{
+        background-color: $culoare8;
+        padding: 1em;
+        font-size: 1.7vw;
+        border-radius: 17px 17px 0px 0px;
+      }
+    }
+    .containerFiltre {
+      background-color: $culoare8;
+      padding: 1em;
+      @include flexBox(column, flex-start,flex-start);
+      border-radius: 0px 17px 17px 17px;
+      gap: 0.5em;
+      min-width: 40vw;
+      .labelFiltru {
+        font-size: 2vw;
+      }
+      .containerTaguri {
+        @include flexBox(row,flex-start,center);
+        flex-wrap: wrap;
+        gap: 0.4em;
+        max-width: 35em;
+        .tag {
+          padding: 0.2em;
+          border-radius: 7px;
+          background-color: $culoare7;
+          border: solid;
+          border-width: 0.1em;
+        }
+        .tag:hover {
+          background-color: $culoare6;
+        }
+        .tag:active {
+          background-color: $culoare5;
+        }
+      }
+    }
+  }
+}

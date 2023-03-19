@@ -1,0 +1,86 @@
+* {
+  color: #F5F5F5;
+}
+
+.logo {
+  font-size: 7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.backgroundModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.backgroundModal .containerContinutModal .containerAlegeri {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.backgroundModal .containerContinutModal .containerAlegeri .alegere {
+  background-color: #424242;
+  padding: 1em;
+  font-size: 1.7vw;
+  border-radius: 17px 17px 0px 0px;
+}
+.backgroundModal .containerContinutModal .containerFiltre {
+  background-color: #424242;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 0px 17px 17px 17px;
+  gap: 0.5em;
+  min-width: 40vw;
+}
+.backgroundModal .containerContinutModal .containerFiltre .labelFiltru {
+  font-size: 2vw;
+}
+.backgroundModal .containerContinutModal .containerFiltre .containerTaguri {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  max-width: 35em;
+}
+.backgroundModal .containerContinutModal .containerFiltre .containerTaguri .tag {
+  padding: 0.2em;
+  border-radius: 7px;
+  background-color: #616161;
+  border: solid;
+  border-width: 0.1em;
+}
+.backgroundModal .containerContinutModal .containerFiltre .containerTaguri .tag:hover {
+  background-color: #757575;
+}
+.backgroundModal .containerContinutModal .containerFiltre .containerTaguri .tag:active {
+  background-color: #9E9E9E;
+}/*# sourceMappingURL=ModalFiltre.css.map */

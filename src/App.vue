@@ -2,8 +2,9 @@
   <Header/>
   <RouterView/>
   <Footer/>
-  <ModalCont v-if="date.accessareCont"/>
+  <ModalCont v-if="date.accesareCont"/>
   <ModalVinde v-if="date.accesareVinde"/>
+  <ModalFiltre v-if="date.accesareFiltre"/>
 </template>
 
 <script setup>
@@ -11,6 +12,7 @@
   import Footer from './components/Footer.vue';
   import ModalCont from './components/ModalCont.vue'
   import ModalVinde from './components/ModalVinde.vue'
+  import ModalFiltre from './components/ModalFiltre.vue'
 
   import { useData } from '@/stores/date.ts'
 

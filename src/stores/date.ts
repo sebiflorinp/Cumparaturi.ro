@@ -5,15 +5,17 @@ export const useData = defineStore("data", {
   state: () => {
     return {
       logat: false,
-      accessareCont: false,
+      accesareCont: false,
       accesareVinde: false,
+      accesareFiltre: false,
+      ceAmCautat: '',
       idUtilizatorLogat: 0,
       categorii: [
         {"idCategorie": 1, "nume": "Electronice", "cale": "1.jpg", "activ":false},
         {"idCategorie": 2, "nume": "Haine", "cale": "2.jpg", "activ":false},
-        {"idCategorie": 3, "nume": "Masini", "cale": "3.webp", "activ":true},
+        {"idCategorie": 3, "nume": "Masini", "cale": "3.webp", "activ":false},
         {"idCategorie": 4, "nume": "Jucarii", "cale": "4.jpg", "activ":false},
-        {"idCategorie": 5, "nume": "Carti", "cale": "5.jpg", "activ":true},
+        {"idCategorie": 5, "nume": "Carti", "cale": "5.jpg", "activ":false},
         {"idCategorie": 6, "nume": "Imobiliare", "cale": "6.jpg", "activ":false},
         {"idCategorie": 7, "nume": "Animale", "cale": "7.jpg", "activ":false},
         {"idCategorie": 8, "nume": "Diverse", "cale": "8.jpg", "activ":false}

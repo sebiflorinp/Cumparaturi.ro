@@ -1,7 +1,7 @@
 <template>
     <div class="containerBaraCautare">
       <input v-model="ceAmCautat" :class="$route.name == 'Pagina principala' ? 'baraCautare' : 'baraCautare pCautare'" type="text">
-      <router-link :to=" $route.name == 'Pagina principala' ? 'cautare/1/' + ceAmCautat : ceAmCautat">
+      <router-link :to="$route.name == 'Pagina principala' ? 'cautare/' + ceAmCautat : '/cautare/' + ceAmCautat">
         <div :class="$route.name == 'Pagina principala' ? 'img' : 'img imgPCautare'"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
       </router-link>
     </div>
@@ -10,13 +10,11 @@
 <script setup>
   import { ref, onMounted } from 'vue'
 
+  const props = defineProps(['ceAmCautat'])
+
   const paginaCurenta = ref("baraCautare")
   const img = ref("img")
   const ceAmCautat = ref('')
-
-  function cautare(){
-
-  }
 
 </script>
 

@@ -5,7 +5,6 @@
     <ul class="containerButoane">
       <li @click="apasareCont" class="buton">Cont</li>
       <li @click="apasareVinde" class="buton">Vinde</li>
-      <li class="buton">Setari</li>
     </ul>
   </div>
 </template>
@@ -16,7 +15,7 @@
   const dbDate = useData()
 
   function apasareCont(){
-    dbDate.accessareCont = true
+    dbDate.accesareCont = true
   }
 
   function apasareVinde(){

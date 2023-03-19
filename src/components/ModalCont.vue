@@ -1,5 +1,5 @@
 <template>
-  <div @click.self="dbDate.accessareCont = false" class="backgroundModal">
+  <div @click.self="dbDate.accesareCont = false" class="backgroundModal">
     <div class="containerContinutModal">
       <div class="selectieLogareCreareCont">
         <div @click="logare = true" class="Logare" :class="{ activ:logare}">

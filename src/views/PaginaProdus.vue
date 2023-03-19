@@ -58,6 +58,7 @@
   const dbTaguri = useTaguri()
 
   const imagine = ref(0)
+
   
   function schimbaImagine(nr){
     imagine.value = nr
