@@ -1,7 +1,7 @@
 <template>
     <div class="containerBaraCautare">
       <input v-model="ceAmCautat" :class="$route.name == 'Pagina principala' ? 'baraCautare' : 'baraCautare pCautare'" type="text">
-      <router-link :to="$route.name == 'Pagina principala' ? 'cautare/' + ceAmCautat : '/cautare/' + ceAmCautat">
+      <router-link @keyup.enter="submit" :to="$route.name == 'Pagina principala' ? 'cautare/' + ceAmCautat : '/cautare/' + ceAmCautat">
         <div :class="$route.name == 'Pagina principala' ? 'img' : 'img imgPCautare'"><img class="lupa" src="@/assets/lupa.png" alt="lupa"></div>
       </router-link>
     </div>
