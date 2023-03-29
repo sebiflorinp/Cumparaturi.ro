@@ -76,9 +76,11 @@
 
   onMounted( () => {
     dbDate.ceAmCautat = props.ceAmCautat
+
   })
   onUpdated( () => {
     dbDate.ceAmCautat = props.ceAmCautat
+    pretMax.value = dbFiltre.returneazaPretMaxim()
   })
 
   onUnmounted( () => {
