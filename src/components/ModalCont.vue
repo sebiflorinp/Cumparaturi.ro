@@ -101,6 +101,8 @@
   function creareCont(){
     dbUtilizatori.creareCont(numeCC.value,prenumeCC.value,emailCC.value,telefonCC.value,parola1CC.value)
     creareContReusit.value = true
+    dbDate.reseteazaDate()
+    dbDate.returneazaDate()
   }
 
 </script>

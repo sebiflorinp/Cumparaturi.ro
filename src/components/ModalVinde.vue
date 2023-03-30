@@ -74,6 +74,8 @@
   function puneAnuntul(){
     anuntPublicat.value = true
     dbProduse.adaugaProdus(numeProdus.value, promovat.value, indexCategorieSelectata.value, pretProdus.value, indexStareSelectat.value, indexJudetSelectat.value, descriereProdus.value)
+    dbDate.reseteazaDate()
+    dbDate.returneazaDate()
   }
 </script>
 

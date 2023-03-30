@@ -1,6 +1,11 @@
 import { defineStore } from "pinia"
 import { useData } from "./date"
 
+import { addDoc, collection, doc, DocumentData, getDoc, getDocs, query } from "firebase/firestore"
+
+
+import db from "@/firebase/index.js"
+
 export const useProduse = defineStore("produse", {
   state: () => {
     const date = useData()
@@ -42,7 +47,7 @@ export const useProduse = defineStore("produse", {
   },
 
   actions: {
-    adaugaProdus(nume:string, promovat:boolean, idCategorie:number, pret:number, idStare:number, idJudet:number, descriere:string){
+    async adaugaProdus(nume:string, promovat:boolean, idCategorie:number, pret:number, idStare:number, idJudet:number, descriere:string){
       interface produs {
         idProdus:number
         nume:string
@@ -62,7 +67,13 @@ export const useProduse = defineStore("produse", {
         idPoza:number
       }
       const produsNou = {} as produs
-      produsNou.idProdus = this.date.$state.produse.slice().reverse()[0].idProdus + 1
+      let idMax=0;
+      this.date.produse.forEach((produs) => {
+        if(produs.idProdus>idMax){
+          idMax = produs.idProdus
+        }
+      })
+      produsNou.idProdus = idMax + 1
       produsNou.nume = nume
       produsNou.cale = 'pozaDefault.png'
       produsNou.promovat = promovat
@@ -72,13 +83,8 @@ export const useProduse = defineStore("produse", {
       produsNou.idStare = idStare
       produsNou.idJudet = idJudet
       produsNou.descriere = descriere
-      this.date.produse.push(produsNou)
-
-      const pozaNoua = {} as poza
-      pozaNoua.idProdus = produsNou.idProdus
-      pozaNoua.cale = 'pozaDefault.png'
-      pozaNoua.idPoza = this.date.$state.pozeProduse.slice().reverse()[0].idPoza + 1
-      this.date.pozeProduse.push(pozaNoua)
+      const colRef = collection(db,'produse')
+      addDoc(colRef,produsNou)
     }
   }
 })

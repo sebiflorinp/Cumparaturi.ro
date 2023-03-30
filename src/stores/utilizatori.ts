@@ -1,6 +1,11 @@
 import { defineStore } from "pinia"
 import { useData } from "./date"
 
+import { addDoc, collection, doc, DocumentData, getDoc, getDocs, query } from "firebase/firestore"
+
+
+import db from "@/firebase/index.js"
+
 export const useUtilizatori = defineStore("utilizatori", {
   state: () => {
     const date = useData()
@@ -68,14 +73,21 @@ export const useUtilizatori = defineStore("utilizatori", {
           parola:string
         }
         const utilizatorNou = {} as utilizator
-        utilizatorNou.idUtilizator = this.date.$state.utilizatori.slice().reverse()[0].idUtilizator + 1
+        let idUtilizatorMax = 0
+        this.date.utilizatori.forEach((utilizator)=> {
+          if(utilizator.idUtilizator>idUtilizatorMax){
+            idUtilizatorMax = utilizator.idUtilizator
+          }
+        })
+        utilizatorNou.idUtilizator = idUtilizatorMax + 1
         utilizatorNou.nume = nume
         utilizatorNou.prenume = prenume
         utilizatorNou.email = email
         utilizatorNou.telefon = telefon
         utilizatorNou.parola = parola
         utilizatorNou.calePoza = "defaultPhoto.jpg"
-        this.date.utilizatori.push(utilizatorNou)
+        const colRef = collection(db,'utilizatori')
+        addDoc(colRef,utilizatorNou)
       }
     }
   }
