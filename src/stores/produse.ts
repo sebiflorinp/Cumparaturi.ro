@@ -34,7 +34,20 @@ export const useProduse = defineStore("produse", {
 
     returneazaAnunturiRecente(){
       return () => {
-        return this.date.$state.produse.slice().reverse()
+        let produseSortate = [] as any
+        this.date.$state.produse.forEach((produs) => {
+          produseSortate.push(produs)
+        })
+        for(let i = 0; i<produseSortate.length - 1; i++){
+          for(let j = i + 1; j<produseSortate.length; j++){
+            if(produseSortate[i].idProdus<produseSortate[j].idProdus){
+              let aux:any = produseSortate[i]
+              produseSortate[i]=produseSortate[j]
+              produseSortate[j]= aux
+            }
+          }
+        }
+        return produseSortate
       }
     },
 
