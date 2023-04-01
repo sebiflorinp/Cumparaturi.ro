@@ -209,7 +209,6 @@ a {
   padding: 1em;
   padding-top: 0em;
   flex-wrap: wrap;
-  -moz-column-gap: 7em;
-       column-gap: 7em;
+  column-gap: 7em;
   row-gap: 2em;
 }/*# sourceMappingURL=cautare.css.map */

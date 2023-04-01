@@ -1,0 +1,65 @@
+* {
+  color: #F5F5F5;
+}
+
+.logo {
+  font-size: 7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.containerBaraAnunt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #616161;
+  min-width: 70vw;
+  border-radius: 17px;
+  padding: 1em;
+}
+.containerBaraAnunt .informatiiAnunt {
+  font-size: 2vw;
+  gap: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.containerBaraAnunt .informatiiAnunt img {
+  max-width: 4.5vw;
+  max-height: 2vw;
+  border-radius: 10px;
+}
+.containerBaraAnunt button {
+  background-color: #757575;
+  padding: 0.6vw;
+  border-radius: 13px;
+  outline: none;
+  border-style: none;
+  font-size: 1.2vw;
+}
+.containerBaraAnunt button:hover {
+  background-color: #9E9E9E;
+}
+.containerBaraAnunt button:active {
+  background-color: #BDBDBD;
+}/*# sourceMappingURL=BaraAnunt.css.map */

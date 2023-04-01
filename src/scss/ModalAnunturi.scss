@@ -1,0 +1,39 @@
+@import './utils/culori';
+@import './utils/flexBox';
+@import './utils/font';
+@import './utils/reset';
+
+.backgroundModal{
+  @include flexBox(column, center, center);
+  top:0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  .selectieAnunturi{
+    @include flexBox(row,flex-start,center);
+    .labelAnunturi{
+      background-color: $culoare8;
+      padding: 0.5em;
+      border-radius: 17px 17px 0 0;
+      font-size: 1.8vw;
+    }
+  }
+  .continutModal{
+    padding: 1em;
+    background-color: $culoare8;
+    border-radius: 0 17px 17px 17px;
+    overflow: scroll;
+    max-height: 40vw;
+    .avertisment{
+      color: red;
+      font-size: 2vw;
+    }
+    .containerAnunturi{
+      @include flexBox(column,flex-start,center);
+      background-color: $culoare8;
+      padding: 1em;
+      gap: 2em;
+    }
+  }
+}

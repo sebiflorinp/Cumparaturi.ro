@@ -5,6 +5,7 @@
     <ul class="containerButoane">
       <li @click="apasareCont" class="buton">Cont</li>
       <li @click="apasareVinde" class="buton">Vinde</li>
+      <li @click="dbDate.accesareAnunturi = true" class="buton">Anunturi Publicate</li>
     </ul>
   </div>
 </template>

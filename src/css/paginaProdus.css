@@ -51,8 +51,7 @@ a {
   max-height: 20em;
   min-width: auto;
   min-height: 20em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   padding: 0.7em;
 }
 .containerInfomratiiProdusSiVanzator .containerProdus .containerPoze {
@@ -81,8 +80,7 @@ a {
   max-height: 7em;
   min-height: 7em;
   min-width: 7em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .containerInfomratiiProdusSiVanzator .containerProdus .containerPoze .containerPoza:hover {
   background-color: #616161;

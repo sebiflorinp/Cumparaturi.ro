@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { addDoc, collection, doc, DocumentData, getDoc, getDocs, query } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, DocumentData, getDoc, getDocs, query } from "firebase/firestore"
 
 
 import db from "@/firebase/index.js"
@@ -12,6 +12,7 @@ export const useData = defineStore("data", {
       accesareCont: false,
       accesareVinde: false,
       accesareFiltre: false,
+      accesareAnunturi: false,
       ceAmCautat: '',
       idUtilizatorLogat: 0,
       dataTest: null,
@@ -67,7 +68,21 @@ export const useData = defineStore("data", {
         this.pozeProduse = []
         this.stari = []
         this.utilizatori = []
+      },
+      async stergeProdus(idProdus:number){
+        let idDocument = '0';
+        const docData = await getDocs(query(collection(db,'produse')))
+        docData.forEach((doc) => {
+          if(doc.data().idProdus == idProdus){
+            idDocument = doc.id
+          }
+        })
+        this.produse = this.produse.filter((produs)=> {
+          return produs.idProdus !=idProdus ? true : false
+        })
+        await deleteDoc(doc(db,'produse',idDocument))
       }
+
   },
-    persist: false
+    persist: true
 })

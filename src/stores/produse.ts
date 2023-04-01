@@ -38,6 +38,16 @@ export const useProduse = defineStore("produse", {
       }
     },
 
+    returneazaAnunturiDupaIdUtilizator(){
+      return (idUtilizator:number) => {
+        return this.date.$state.produse.filter((produs) =>{ 
+          if(produs.idUtilizator == idUtilizator){
+            return true
+          }
+        })
+      }
+    },
+
     returneazaIdUtilizatorDupaProdus(){
       return (idProdus:number) => {
         return this.date.$state.produse.find( (produs:any) => produs.idProdus == idProdus)?.idUtilizator

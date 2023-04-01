@@ -1,0 +1,71 @@
+* {
+  color: #F5F5F5;
+}
+
+.logo {
+  font-size: 7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.backgroundModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.backgroundModal .selectieAnunturi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.backgroundModal .selectieAnunturi .labelAnunturi {
+  background-color: #424242;
+  padding: 0.5em;
+  border-radius: 17px 17px 0 0;
+  font-size: 1.8vw;
+}
+.backgroundModal .continutModal {
+  padding: 1em;
+  background-color: #424242;
+  border-radius: 0 17px 17px 17px;
+  overflow: scroll;
+  max-height: 40vw;
+}
+.backgroundModal .continutModal .avertisment {
+  color: red;
+  font-size: 2vw;
+}
+.backgroundModal .continutModal .containerAnunturi {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #424242;
+  padding: 1em;
+  gap: 2em;
+}/*# sourceMappingURL=ModalAnunturi.css.map */

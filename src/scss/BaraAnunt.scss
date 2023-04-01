@@ -1,0 +1,36 @@
+@import './utils/culori';
+@import './utils/flexBox';
+@import './utils/font';
+@import './utils/reset';
+
+.containerBaraAnunt{
+  @include flexBox(row,space-between,center);
+  background-color: $culoare7;
+  min-width: 70vw;
+  border-radius: 17px;
+  padding: 1em;
+  .informatiiAnunt{
+    font-size: 2vw;
+    gap: 0.5em;
+    @include flexBox(row,flex-start,center);
+    img {
+      max-width: 4.5vw;
+      max-height: 2vw;
+      border-radius: 10px;
+    }
+  }
+  button {
+    background-color: $culoare6;
+    padding: 0.6vw;
+    border-radius: 13px;
+    outline: none;
+    border-style: none;
+    font-size: 1.2vw;
+  }
+  button:hover{
+    background-color: $culoare5;
+  }
+  button:active{
+    background-color: $culoare4;
+  }
+}
