@@ -95,6 +95,17 @@ export const useProduse = defineStore("produse", {
       produsNou.descriere = descriere
       const colRef = collection(db,'produse')
       addDoc(colRef,produsNou)
+      interface pozaProdus{
+        cale:string
+        idPoza:number
+        idProdus:number
+      }
+      let pozaProdusNoua = {} as pozaProdus
+      pozaProdusNoua.cale = "pozaDefault.png"
+      pozaProdusNoua.idProdus = idMax + 1
+      pozaProdusNoua.idPoza = idMax + 2
+      const colR = collection(db,'pozeProduse')
+      addDoc(colR,pozaProdusNoua)
     }
   }
 })
